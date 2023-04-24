@@ -5,4 +5,5 @@
     console.log(data);
 </script>
 
-<h1>Status</h1>
+<div class="page">
+</div>
