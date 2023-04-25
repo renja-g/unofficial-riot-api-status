@@ -117,7 +117,31 @@ const config: Config = {
 					children_url: '/lol/league/v4/masterleagues/by-queue/{queue}'
 				}
 			]
-		}
+		},
+		{
+			name: 'LOL-CHALLENGES-V1',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/challenges/v1/challenges/config'
+				},
+				{
+					children_url: '/lol/challenges/v1/challenges/percentiles'
+				},
+				{
+					children_url: '/lol/challenges/v1/challenges/{challengeId}/config'
+				},
+				{
+					children_url: '/lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}'
+				},
+				{
+					children_url: '/lol/challenges/v1/challenges/{challengeId}/percentiles'
+				},
+				{
+					children_url: '/lol/challenges/v1/player-data/{puuid}'
+				}
+			]
+		},
 	]
 };
 
