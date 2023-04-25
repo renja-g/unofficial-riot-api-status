@@ -362,6 +362,15 @@ const config: Config = {
 					children_url: '/val/ranked/v1/leaderboards/by-act/{actId}'
 				}
 			]
+		},
+		{
+			name: 'VAL-STATUS-V1',
+			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
+			children: [
+				{
+					children_url: '/val/status/v1/platform-data'
+				}
+			]
 		}
 	]
 };
