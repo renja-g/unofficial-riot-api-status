@@ -222,6 +222,18 @@ const config: Config = {
 					children_url: '/lol/match/v5/matches/{matchId}/timeline'
 				}
 			]
+		},
+		{
+			name: 'SPECTATOR-V4',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}'
+				},
+				{
+					children_url: '/lol/spectator/v4/featured-games'
+				}
+			]
 		}
 	]
 };
