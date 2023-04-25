@@ -207,6 +207,21 @@ const config: Config = {
 					children_url: '/lor/status/v1/platform-data'
 				}
 			]
+		},
+		{
+			name: 'MATCH-V5',
+			regions: ['americas', 'asia', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/lol/match/v5/matches/by-puuid/{puuid}/ids'
+				},
+				{
+					children_url: '/lol/match/v5/matches/{matchId}'
+				},
+				{
+					children_url: '/lol/match/v5/matches/{matchId}/timeline'
+				}
+			]
 		}
 	]
 };
