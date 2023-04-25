@@ -297,6 +297,15 @@ const config: Config = {
 					children_url: '/tft/match/v1/matches/{matchId}'
 				}
 			]
+		},
+		{
+			name: 'TFT-STATUS-V1',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/tft/status/v1/platform-data'
+				}
+			]
 		}
 	]
 };
