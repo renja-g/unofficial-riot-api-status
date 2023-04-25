@@ -353,6 +353,15 @@ const config: Config = {
 					children_url: '/val/match/v1/recent-matches/by-queue/{queue}'
 				}
 			]
+		},
+		{
+			name: 'VAL-RANKED-V1',
+			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
+			children: [
+				{
+					children_url: '/val/ranked/v1/leaderboards/by-act/{actId}'
+				}
+			]
 		}
 	]
 };
