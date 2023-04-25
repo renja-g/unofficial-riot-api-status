@@ -62,6 +62,30 @@ const config: Config = {
 			]
 		},
 		{
+			name: 'CLASH-V1',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/clash/v1/players/by-puuid/{encryptedPUUID}'
+				},
+				{
+					children_url: '/lol/clash/v1/players/by-summoner/{summonerId}'
+				},
+				{
+					children_url: '/lol/clash/v1/teams/{teamId}'
+				},
+				{
+					children_url: '/lol/clash/v1/tournaments'
+				},
+				{
+					children_url: '/lol/clash/v1/tournaments/by-team/{teamId}'
+				},
+				{
+					children_url: '/lol/clash/v1/tournaments/{tournamentId}'
+				}
+			]
+		},
+		{
 			name: 'LEAGUE-V4 ',
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
