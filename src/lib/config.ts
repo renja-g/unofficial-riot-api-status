@@ -234,6 +234,30 @@ const config: Config = {
 					children_url: '/lol/spectator/v4/featured-games'
 				}
 			]
+		},
+		{
+			name: 'SUMMONER-V4',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/fulfillment/v1/summoners/by-puuid/{rsoPUUID}'
+				},
+				{
+					children_url: '/lol/summoner/v4/summoners/by-account/{encryptedAccountId}'
+				},
+				{
+					children_url: '/lol/summoner/v4/summoners/by-name/{summonerName}'
+				},
+				{
+					children_url: '/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}'
+				},
+				{
+					children_url: '/lol/summoner/v4/summoners/me'
+				},
+				{
+					children_url: '/lol/summoner/v4/summoners/{encryptedSummonerId}'
+				}
+			]
 		}
 	]
 };
