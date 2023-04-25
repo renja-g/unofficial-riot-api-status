@@ -338,6 +338,21 @@ const config: Config = {
 					children_url: '/val/content/v1/contents'
 				}
 			]
+		},
+		{
+			name: 'VAL-MATCH-V1',
+			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
+			children: [
+				{
+					children_url: '/val/match/v1/matches/{matchId}'
+				},
+				{
+					children_url: '/val/match/v1/matchlists/by-puuid/{puuid}'
+				},
+				{
+					children_url: '/val/match/v1/recent-matches/by-queue/{queue}'
+				}
+			]
 		}
 	]
 };
