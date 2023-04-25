@@ -168,6 +168,15 @@ const config: Config = {
 					children_url: '/lor/deck/v1/decks/me'
 				}
 			]
+		},
+		{
+			name: 'LOR-INVENTORY-V1',
+			regions: ['americas', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/lor/inventory/v1/cards/me'
+				}
+			]
 		}
 	]
 };
