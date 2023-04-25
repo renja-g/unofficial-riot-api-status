@@ -5,7 +5,7 @@ interface Endpoint {
 }
 
 interface Children {
-	children_url: string;
+	child_url: string;
 }
 
 interface Config {
@@ -21,16 +21,16 @@ const config: Config = {
 			regions: ['americas', 'asia', 'esports', 'europe'],
 			children: [
 				{
-					children_url: '/riot/account/v1/accounts/by-puuid/{puuid}'
+					child_url: '/riot/account/v1/accounts/by-puuid/{puuid}'
 				},
 				{
-					children_url: '/riot/account/v1/accounts/by-riot-id/{gameName}/{tagLine}'
+					child_url: '/riot/account/v1/accounts/by-riot-id/{gameName}/{tagLine}'
 				},
 				{
-					children_url: '/riot/account/v1/accounts/me'
+					child_url: '/riot/account/v1/accounts/me'
 				},
 				{
-					children_url: '/riot/account/v1/active-shards/by-game/{game}/by-puuid/{puuid}'
+					child_url: '/riot/account/v1/active-shards/by-game/{game}/by-puuid/{puuid}'
 				}
 			]
 		},
@@ -39,16 +39,16 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}'
+					child_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}'
 				},
 				{
-					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}'
+					child_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}'
 				},
 				{
-					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/top'
+					child_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/top'
 				},
 				{
-					children_url: '/lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}'
+					child_url: '/lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}'
 				}
 			]
 		},
@@ -57,7 +57,7 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/platform/v3/champion-rotations'
+					child_url: '/lol/platform/v3/champion-rotations'
 				}
 			]
 		},
@@ -66,22 +66,22 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/clash/v1/players/by-puuid/{encryptedPUUID}'
+					child_url: '/lol/clash/v1/players/by-puuid/{encryptedPUUID}'
 				},
 				{
-					children_url: '/lol/clash/v1/players/by-summoner/{summonerId}'
+					child_url: '/lol/clash/v1/players/by-summoner/{summonerId}'
 				},
 				{
-					children_url: '/lol/clash/v1/teams/{teamId}'
+					child_url: '/lol/clash/v1/teams/{teamId}'
 				},
 				{
-					children_url: '/lol/clash/v1/tournaments'
+					child_url: '/lol/clash/v1/tournaments'
 				},
 				{
-					children_url: '/lol/clash/v1/tournaments/by-team/{teamId}'
+					child_url: '/lol/clash/v1/tournaments/by-team/{teamId}'
 				},
 				{
-					children_url: '/lol/clash/v1/tournaments/{tournamentId}'
+					child_url: '/lol/clash/v1/tournaments/{tournamentId}'
 				}
 			]
 		},
@@ -90,7 +90,7 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/league-exp/v4/entries/{queue}/{tier}/{division}}'
+					child_url: '/lol/league-exp/v4/entries/{queue}/{tier}/{division}}'
 				}
 			]
 		},
@@ -99,22 +99,22 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/league/v4/challengerleagues/by-queue/{queue}'
+					child_url: '/lol/league/v4/challengerleagues/by-queue/{queue}'
 				},
 				{
-					children_url: '/lol/league/v4/entries/by-summoner/{encryptedSummonerId}'
+					child_url: '/lol/league/v4/entries/by-summoner/{encryptedSummonerId}'
 				},
 				{
-					children_url: '/lol/league/v4/entries/{queue}/{tier}/{division}'
+					child_url: '/lol/league/v4/entries/{queue}/{tier}/{division}'
 				},
 				{
-					children_url: '/lol/league/v4/grandmasterleagues/by-queue/{queue}'
+					child_url: '/lol/league/v4/grandmasterleagues/by-queue/{queue}'
 				},
 				{
-					children_url: '/lol/league/v4/leagues/{leagueId}'
+					child_url: '/lol/league/v4/leagues/{leagueId}'
 				},
 				{
-					children_url: '/lol/league/v4/masterleagues/by-queue/{queue}'
+					child_url: '/lol/league/v4/masterleagues/by-queue/{queue}'
 				}
 			]
 		},
@@ -123,22 +123,22 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/challenges/v1/challenges/config'
+					child_url: '/lol/challenges/v1/challenges/config'
 				},
 				{
-					children_url: '/lol/challenges/v1/challenges/percentiles'
+					child_url: '/lol/challenges/v1/challenges/percentiles'
 				},
 				{
-					children_url: '/lol/challenges/v1/challenges/{challengeId}/config'
+					child_url: '/lol/challenges/v1/challenges/{challengeId}/config'
 				},
 				{
-					children_url: '/lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}'
+					child_url: '/lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}'
 				},
 				{
-					children_url: '/lol/challenges/v1/challenges/{challengeId}/percentiles'
+					child_url: '/lol/challenges/v1/challenges/{challengeId}/percentiles'
 				},
 				{
-					children_url: '/lol/challenges/v1/player-data/{puuid}'
+					child_url: '/lol/challenges/v1/player-data/{puuid}'
 				}
 			]
 		},
@@ -147,7 +147,7 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/status/v3/shard-data'
+					child_url: '/lol/status/v3/shard-data'
 				}
 			]
 		},
@@ -156,7 +156,7 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/status/v4/platform-data'
+					child_url: '/lol/status/v4/platform-data'
 				}
 			]
 		},
@@ -165,7 +165,7 @@ const config: Config = {
 			regions: ['americas', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lor/deck/v1/decks/me'
+					child_url: '/lor/deck/v1/decks/me'
 				}
 			]
 		},
@@ -174,7 +174,7 @@ const config: Config = {
 			regions: ['americas', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lor/inventory/v1/cards/me'
+					child_url: '/lor/inventory/v1/cards/me'
 				}
 			]
 		},
@@ -183,10 +183,10 @@ const config: Config = {
 			regions: ['americas', 'apac', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lor/match/v1/matches/by-puuid/{puuid}/ids'
+					child_url: '/lor/match/v1/matches/by-puuid/{puuid}/ids'
 				},
 				{
-					children_url: '/lor/match/v1/matches/{matchId}'
+					child_url: '/lor/match/v1/matches/{matchId}'
 				}
 			]
 		},
@@ -195,7 +195,7 @@ const config: Config = {
 			regions: ['americas', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lor/ranked/v1/leaderboards'
+					child_url: '/lor/ranked/v1/leaderboards'
 				}
 			]
 		},
@@ -204,7 +204,7 @@ const config: Config = {
 			regions: ['americas', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lor/status/v1/platform-data'
+					child_url: '/lor/status/v1/platform-data'
 				}
 			]
 		},
@@ -213,13 +213,13 @@ const config: Config = {
 			regions: ['americas', 'asia', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/lol/match/v5/matches/by-puuid/{puuid}/ids'
+					child_url: '/lol/match/v5/matches/by-puuid/{puuid}/ids'
 				},
 				{
-					children_url: '/lol/match/v5/matches/{matchId}'
+					child_url: '/lol/match/v5/matches/{matchId}'
 				},
 				{
-					children_url: '/lol/match/v5/matches/{matchId}/timeline'
+					child_url: '/lol/match/v5/matches/{matchId}/timeline'
 				}
 			]
 		},
@@ -228,10 +228,10 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}'
+					child_url: '/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}'
 				},
 				{
-					children_url: '/lol/spectator/v4/featured-games'
+					child_url: '/lol/spectator/v4/featured-games'
 				}
 			]
 		},
@@ -240,22 +240,22 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/fulfillment/v1/summoners/by-puuid/{rsoPUUID}'
+					child_url: '/fulfillment/v1/summoners/by-puuid/{rsoPUUID}'
 				},
 				{
-					children_url: '/lol/summoner/v4/summoners/by-account/{encryptedAccountId}'
+					child_url: '/lol/summoner/v4/summoners/by-account/{encryptedAccountId}'
 				},
 				{
-					children_url: '/lol/summoner/v4/summoners/by-name/{summonerName}'
+					child_url: '/lol/summoner/v4/summoners/by-name/{summonerName}'
 				},
 				{
-					children_url: '/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}'
+					child_url: '/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}'
 				},
 				{
-					children_url: '/lol/summoner/v4/summoners/me'
+					child_url: '/lol/summoner/v4/summoners/me'
 				},
 				{
-					children_url: '/lol/summoner/v4/summoners/{encryptedSummonerId}'
+					child_url: '/lol/summoner/v4/summoners/{encryptedSummonerId}'
 				}
 			]
 		},
@@ -264,25 +264,25 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/tft/league/v1/challenger'
+					child_url: '/tft/league/v1/challenger'
 				},
 				{
-					children_url: '/tft/league/v1/entries/by-summoner/{summonerId}'
+					child_url: '/tft/league/v1/entries/by-summoner/{summonerId}'
 				},
 				{
-					children_url: '/tft/league/v1/entries/{tier}/{division}'
+					child_url: '/tft/league/v1/entries/{tier}/{division}'
 				},
 				{
-					children_url: '/tft/league/v1/grandmaster'
+					child_url: '/tft/league/v1/grandmaster'
 				},
 				{
-					children_url: '/tft/league/v1/leagues/{leagueId}'
+					child_url: '/tft/league/v1/leagues/{leagueId}'
 				},
 				{
-					children_url: '/tft/league/v1/master'
+					child_url: '/tft/league/v1/master'
 				},
 				{
-					children_url: '/tft/league/v1/rated-ladders/{queue}/top'
+					child_url: '/tft/league/v1/rated-ladders/{queue}/top'
 				}
 			]
 		},
@@ -291,10 +291,10 @@ const config: Config = {
 			regions: ['americas', 'asia', 'europe', 'sea'],
 			children: [
 				{
-					children_url: '/tft/match/v1/matches/by-puuid/{puuid}/ids'
+					child_url: '/tft/match/v1/matches/by-puuid/{puuid}/ids'
 				},
 				{
-					children_url: '/tft/match/v1/matches/{matchId}'
+					child_url: '/tft/match/v1/matches/{matchId}'
 				}
 			]
 		},
@@ -303,7 +303,7 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/tft/status/v1/platform-data'
+					child_url: '/tft/status/v1/platform-data'
 				}
 			]
 		},
@@ -312,19 +312,19 @@ const config: Config = {
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
 				{
-					children_url: '/tft/summoner/v1/summoners/by-account/{encryptedAccountId}'
+					child_url: '/tft/summoner/v1/summoners/by-account/{encryptedAccountId}'
 				},
 				{
-					children_url: '/tft/summoner/v1/summoners/by-name/{summonerName}'
+					child_url: '/tft/summoner/v1/summoners/by-name/{summonerName}'
 				},
 				{
-					children_url: '/tft/summoner/v1/summoners/by-puuid/{encryptedPUUID}'
+					child_url: '/tft/summoner/v1/summoners/by-puuid/{encryptedPUUID}'
 				},
 				{
-					children_url: '/tft/summoner/v1/summoners/me'
+					child_url: '/tft/summoner/v1/summoners/me'
 				},
 				{
-					children_url: '/tft/summoner/v1/summoners/{encryptedSummonerId}'
+					child_url: '/tft/summoner/v1/summoners/{encryptedSummonerId}'
 				}
 			]
 		},
@@ -335,7 +335,7 @@ const config: Config = {
 			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
 			children: [
 				{
-					children_url: '/val/content/v1/contents'
+					child_url: '/val/content/v1/contents'
 				}
 			]
 		},
@@ -344,13 +344,13 @@ const config: Config = {
 			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
 			children: [
 				{
-					children_url: '/val/match/v1/matches/{matchId}'
+					child_url: '/val/match/v1/matches/{matchId}'
 				},
 				{
-					children_url: '/val/match/v1/matchlists/by-puuid/{puuid}'
+					child_url: '/val/match/v1/matchlists/by-puuid/{puuid}'
 				},
 				{
-					children_url: '/val/match/v1/recent-matches/by-queue/{queue}'
+					child_url: '/val/match/v1/recent-matches/by-queue/{queue}'
 				}
 			]
 		},
@@ -359,7 +359,7 @@ const config: Config = {
 			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
 			children: [
 				{
-					children_url: '/val/ranked/v1/leaderboards/by-act/{actId}'
+					child_url: '/val/ranked/v1/leaderboards/by-act/{actId}'
 				}
 			]
 		},
@@ -368,7 +368,7 @@ const config: Config = {
 			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
 			children: [
 				{
-					children_url: '/val/status/v1/platform-data'
+					child_url: '/val/status/v1/platform-data'
 				}
 			]
 		}
@@ -377,4 +377,4 @@ const config: Config = {
 
 export default config;
 
-// full_url = https://{region}.api.riotgames.com{children_url}
+// full_url = https://{region}.api.riotgames.com{child_url}
