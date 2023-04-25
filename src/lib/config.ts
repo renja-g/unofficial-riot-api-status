@@ -189,6 +189,15 @@ const config: Config = {
 					children_url: '/lor/match/v1/matches/{matchId}'
 				}
 			]
+		},
+		{
+			name: 'LOR-RANKED-V1',
+			regions: ['americas', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/lor/ranked/v1/leaderboards'
+				}
+			]
 		}
 	]
 };
