@@ -258,6 +258,33 @@ const config: Config = {
 					children_url: '/lol/summoner/v4/summoners/{encryptedSummonerId}'
 				}
 			]
+		},
+		{
+			name: 'TFT-LEAGUE-V1',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/tft/league/v1/challenger'
+				},
+				{
+					children_url: '/tft/league/v1/entries/by-summoner/{summonerId}'
+				},
+				{
+					children_url: '/tft/league/v1/entries/{tier}/{division}'
+				},
+				{
+					children_url: '/tft/league/v1/grandmaster'
+				},
+				{
+					children_url: '/tft/league/v1/leagues/{leagueId}'
+				},
+				{
+					children_url: '/tft/league/v1/master'
+				},
+				{
+					children_url: '/tft/league/v1/rated-ladders/{queue}/top'
+				}
+			]
 		}
 	]
 };
