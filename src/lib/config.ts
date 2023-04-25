@@ -35,6 +35,24 @@ const config: Config = {
 			]
 		},
 		{
+			name: 'CHAMPION-MASTERY-V4',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}'
+				},
+				{
+					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}'
+				},
+				{
+					children_url: '/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/top'
+				},
+				{
+					children_url: '/lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}'
+				}
+			]
+		},
+		{
 			name: 'LEAGUE-V4 ',
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
