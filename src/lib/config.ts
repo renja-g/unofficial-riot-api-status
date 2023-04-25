@@ -26,9 +26,9 @@ const config: Config = {
 				{
 					children_url: '/riot/account/v1/accounts/by-riot-id/{gameName}/{tagLine}'
 				},
-				//      {
-				//        'url': '/riot/account/v1/accounts/me',
-				//      },
+				{
+					children_url: '/riot/account/v1/accounts/me'
+				},
 				{
 					children_url: '/riot/account/v1/active-shards/by-game/{game}/by-puuid/{puuid}'
 				}
@@ -142,6 +142,33 @@ const config: Config = {
 				}
 			]
 		},
+		{
+			name: 'LOL-STATUS-V3',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/status/v3/shard-data'
+				}
+			]
+		},
+		{
+			name: 'LOL-STATUS-V4',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/status/v4/platform-data'
+				}
+			]
+		},
+		{
+			name: 'LOR-DECK-V1',
+			regions: ['americas', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/lor/deck/v1/decks/me'
+				}
+			]
+		}
 	]
 };
 
