@@ -177,6 +177,18 @@ const config: Config = {
 					children_url: '/lor/inventory/v1/cards/me'
 				}
 			]
+		},
+		{
+			name: 'LOR-MATCH-V1',
+			regions: ['americas', 'apac', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/lor/match/v1/matches/by-puuid/{puuid}/ids'
+				},
+				{
+					children_url: '/lor/match/v1/matches/{matchId}'
+				}
+			]
 		}
 	]
 };
