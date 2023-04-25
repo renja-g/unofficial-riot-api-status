@@ -285,6 +285,18 @@ const config: Config = {
 					children_url: '/tft/league/v1/rated-ladders/{queue}/top'
 				}
 			]
+		},
+		{
+			name: 'TFT-MATCH-V1',
+			regions: ['americas', 'asia', 'europe', 'sea'],
+			children: [
+				{
+					children_url: '/tft/match/v1/matches/by-puuid/{puuid}/ids'
+				},
+				{
+					children_url: '/tft/match/v1/matches/{matchId}'
+				}
+			]
 		}
 	]
 };
