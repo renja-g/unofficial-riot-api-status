@@ -86,6 +86,15 @@ const config: Config = {
 			]
 		},
 		{
+			name: 'LEAGUE-EXP-V4',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/lol/league-exp/v4/entries/{queue}/{tier}/{division}}'
+				}
+			]
+		},
+		{
 			name: 'LEAGUE-V4 ',
 			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
 			children: [
