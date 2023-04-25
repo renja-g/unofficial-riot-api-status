@@ -306,6 +306,38 @@ const config: Config = {
 					children_url: '/tft/status/v1/platform-data'
 				}
 			]
+		},
+		{
+			name: 'TFT-SUMMONER-V1',
+			regions: ['br1', 'eun1', 'euw1', 'jp1', 'kr', 'la1', 'la2', 'na1', 'oc1', 'ph2', 'ru', 'sg2', 'th2', 'tr1', 'tw2', 'vn2'],
+			children: [
+				{
+					children_url: '/tft/summoner/v1/summoners/by-account/{encryptedAccountId}'
+				},
+				{
+					children_url: '/tft/summoner/v1/summoners/by-name/{summonerName}'
+				},
+				{
+					children_url: '/tft/summoner/v1/summoners/by-puuid/{encryptedPUUID}'
+				},
+				{
+					children_url: '/tft/summoner/v1/summoners/me'
+				},
+				{
+					children_url: '/tft/summoner/v1/summoners/{encryptedSummonerId}'
+				}
+			]
+		},
+		// TODO: TOURNAMENT-STUB-V4
+		// TODO: TOURNAMENT-V4
+		{
+			name: 'VAL-CONTENT-V1',
+			regions: ['ap', 'br', 'esports', 'eu', 'kr', 'latam', 'na'],
+			children: [
+				{
+					children_url: '/val/content/v1/contents'
+				}
+			]
 		}
 	]
 };
