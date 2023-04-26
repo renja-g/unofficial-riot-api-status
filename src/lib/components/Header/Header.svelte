@@ -3,9 +3,8 @@
 </script>
 
 <header>
-	<div class="container">
+	<div class="header">
 		<h1>UNOFFICIAL <span class="text-riot">RIOT</span> API STATUS</h1>
-		<img src="/Riot_Blitzcrank.jpg" alt="plus" />
 	</div>
 </header>
 
@@ -14,22 +13,19 @@
         color: #ea0028;
     }
 
-    header {
+    .header {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        height: 72px;
+        background-color: #0f172a;
     }
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .header h1 {
+        margin: 0;
+        padding: 0;
+        padding-left: 24px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
     }
-
-	
-	img {
-		margin-top: 1rem;
-		width: 50rem;
-	}
 </style>
-
