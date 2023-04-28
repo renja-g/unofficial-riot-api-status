@@ -1,80 +1,181 @@
 {
     "baseUrl": "https://{region}.api.riotgames.com",
-	"endpoints": [
-		{
-			"name": "LEAGUE-V4 ",
-			"regions": ["br1", "eun1", "euw1", "jp1", "kr", "la1", "la2", "na1", "oc1", "ph2", "ru", "sg2", "th2", "tr1", "tw2", "vn2"],
-			"children": [
-				{
-					"child_url": "/lol/league/v4/challengerleagues/by-queue/{queue}"
-				},
-				{
-					"child_url": "/lol/league/v4/entries/by-summoner/{encryptedSummonerId}"
-				},
-				{
-					"child_url": "/lol/league/v4/entries/{queue}/{tier}/{division}"
-				},
-				{
-					"child_url": "/lol/league/v4/grandmasterleagues/by-queue/{queue}"
-				},
-				{
-					"child_url": "/lol/league/v4/leagues/{leagueId}"
-				},
-				{
-					"child_url": "/lol/league/v4/masterleagues/by-queue/{queue}"
-				}
-			]
-		},
-		{
-			"name": "MATCH-V5",
-			"regions": ["americas", "asia", "europe", "sea"],
-			"children": [
-				{
-					"child_url": "/lol/match/v5/matches/by-puuid/{puuid}/ids"
-				},
-				{
-					"child_url": "/lol/match/v5/matches/{matchId}"
-				},
-				{
-					"child_url": "/lol/match/v5/matches/{matchId}/timeline"
-				}
-			]
-		},
-		{
-			"name": "SPECTATOR-V4",
-			"regions": ["br1", "eun1", "euw1", "jp1", "kr", "la1", "la2", "na1", "oc1", "ph2", "ru", "sg2", "th2", "tr1", "tw2", "vn2"],
-			"children": [
-				{
-					"child_url": "/lol/spectator/v4/active-games/by-summoner/{encryptedSummonerId}"
-				},
-				{
-					"child_url": "/lol/spectator/v4/featured-games"
-				}
-			]
-		},
-		{
-			"name": "SUMMONER-V4",
-			"regions": ["br1", "eun1", "euw1", "jp1", "kr", "la1", "la2", "na1", "oc1", "ph2", "ru", "sg2", "th2", "tr1", "tw2", "vn2"],
-			"children": [
-				{
-					"child_url": "/fulfillment/v1/summoners/by-puuid/{rsoPUUID}"
-				},
-				{
-					"child_url": "/lol/summoner/v4/summoners/by-account/{encryptedAccountId}"
-				},
-				{
-					"child_url": "/lol/summoner/v4/summoners/by-name/{summonerName}"
-				},
-				{
-					"child_url": "/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}"
-				},
-				{
-					"child_url": "/lol/summoner/v4/summoners/me"
-				},
-				{
-					"child_url": "/lol/summoner/v4/summoners/{encryptedSummonerId}"
-				}
-			]
-		}
-	]
+    "alias": {
+        "encryptedAccountId": "accountId",
+        "encryptedPUUID": "puuid",
+        "encryptedSummonerId": "summonerId"
+    },
+    "data": {
+        "lol": {
+            "americas": {
+                "puuid": "XXX",
+                "matchId": "XXX"
+            },
+            "asia": {
+                "puuid": "XXX",
+                "matchId": "XXX"
+            },
+            "europe": {
+                "puuid": "XXX",
+                "matchId": "XXX"
+            },
+            "sea": {
+                "puuid": "XXX",
+                "matchId": "XXX"
+            },
+            "br1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "eun1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "euw1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "jp1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "kr": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "la1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "la2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "na1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "oc1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "ph2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "ru": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "sg2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "th2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "tr1": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "tw2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            },
+            "vn2": {
+                "accountId": "XXX",
+                "summonerName": "XXX",
+                "puuid": "XXX",
+                "summonerId": "XXX"
+            }
+        },
+        "tft": {},
+        "lor": {},
+        "val": {}
+    },
+    "endpoints": [
+        {
+            "game": "lol",
+            "name": "MATCH-V5",
+            "regions": ["americas", "asia", "europe", "sea"],
+            "children": [
+                {
+                    "child_url": "/lol/match/v5/matches/by-puuid/{puuid}/ids"
+                },
+                {
+                    "child_url": "/lol/match/v5/matches/{matchId}"
+                },
+                {
+                    "child_url": "/lol/match/v5/matches/{matchId}/timeline"
+                }
+            ]
+        },
+        {
+            "game": "lol",
+            "name": "SUMMONER-V4",
+            "regions": [
+                "br1",
+                "eun1",
+                "euw1",
+                "jp1",
+                "kr",
+                "la1",
+                "la2",
+                "na1",
+                "oc1",
+                "ph2",
+                "ru",
+                "sg2",
+                "th2",
+                "tr1",
+                "tw2",
+                "vn2"
+            ],
+            "children": [
+                {
+                    "child_url": "/lol/summoner/v4/summoners/by-account/{encryptedAccountId}"
+                },
+                {
+                    "child_url": "/lol/summoner/v4/summoners/by-name/{summonerName}"
+                },
+                {
+                    "child_url": "/lol/summoner/v4/summoners/by-puuid/{encryptedPUUID}"
+                },
+                {
+                    "child_url": "/lol/summoner/v4/summoners/{encryptedSummonerId}"
+                }
+            ]
+        }
+    ]
 }
