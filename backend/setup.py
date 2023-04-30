@@ -1,6 +1,7 @@
 import json
 from riotwatcher import LolWatcher, ApiError
 import os
+import shutil
 
 """
 Autpomatically configures the endpoints.json with the correct API KEY
@@ -85,7 +86,7 @@ def get_summonerId(region):
     return summoner['id']
 
 
-with open('endpoints.json', 'r') as f:
+with open('endpoints_template.json', 'r') as f:
     endpoints = json.load(f)
 data = endpoints['data']
 
