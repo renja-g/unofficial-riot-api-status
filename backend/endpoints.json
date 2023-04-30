@@ -8,116 +8,116 @@
     "data": {
         "lol": {
             "americas": {
-                "puuid": "XXX",
-                "matchId": "XXX"
+                "puuid": "",
+                "matchId": ""
             },
             "asia": {
-                "puuid": "XXX",
-                "matchId": "XXX"
+                "puuid": "",
+                "matchId": ""
             },
             "europe": {
-                "puuid": "XXX",
-                "matchId": "XXX"
+                "puuid": "",
+                "matchId": ""
             },
             "sea": {
-                "puuid": "XXX",
-                "matchId": "XXX"
+                "puuid": "",
+                "matchId": ""
             },
             "br1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "eun1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "euw1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "jp1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "kr": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "la1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "la2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "na1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "oc1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "ph2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "ru": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "sg2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "th2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "tr1": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "tw2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             },
             "vn2": {
-                "accountId": "XXX",
-                "summonerName": "XXX",
-                "puuid": "XXX",
-                "summonerId": "XXX"
+                "accountId": "",
+                "summonerName": "",
+                "puuid": "",
+                "summonerId": ""
             }
         },
         "tft": {},
@@ -128,7 +128,12 @@
         {
             "game": "lol",
             "name": "MATCH-V5",
-            "regions": ["americas", "asia", "europe", "sea"],
+            "regions": [
+                "americas",
+                "asia",
+                "europe",
+                "sea"
+            ],
             "children": [
                 {
                     "child_url": "/lol/match/v5/matches/by-puuid/{puuid}/ids"
