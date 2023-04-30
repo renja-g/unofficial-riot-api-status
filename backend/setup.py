@@ -1,5 +1,5 @@
 import json
-import cassiopeia as cass
+from riotwatcher import LolWatcher, ApiError
 import os
 
 """
@@ -8,6 +8,7 @@ Autpomatically configures the endpoints.json with the correct API KEY
 
 try:
     API_KEY = os.environ['RIOT_API_KEY']
+    whatcher = LolWatcher(API_KEY)
 except KeyError:
     print("Please set the environment variable API_KEY")
     exit(1)
@@ -23,20 +24,66 @@ def get_puuid(region):
         region = 'eun1'
     elif region == "sea":
         region = 'oc1'
-    summoner = cass.get_summoner(name=summoner_name, region=region)
-    return summoner.puuid
 
-def get_matchId():
-    return "XXX"
+    summoner = whatcher.summoner.by_name(region, summoner_name)
+    return summoner['puuid']
 
-def get_accountId():
-    return "XXX"
 
-def get_summonerName():
-    return "XXX"
+def get_matchId(region):
+    if region == "americas":
+        region = 'na1'
+    elif region == "asia":
+        region = 'kr'
+    elif region == "europe":
+        region = 'eun1'
+    elif region == "sea":
+        region = 'oc1'
 
-def get_summonerId():
-    return "XXX"
+    summoner = whatcher.summoner.by_name(region, summoner_name)
+    match = whatcher.match.matchlist_by_puuid(region, summoner['puuid'])
+    return match[0]
+
+
+def get_accountId(region):
+    if region == "americas":
+        region = 'na1'
+    elif region == "asia":
+        region = 'kr'
+    elif region == "europe":
+        region = 'eun1'
+    elif region == "sea":
+        region = 'oc1'
+
+    summoner = whatcher.summoner.by_name(region, summoner_name)
+    return summoner['accountId']
+
+
+def get_summonerName(region):
+    if region == "americas":
+        region = 'na1'
+    elif region == "asia":
+        region = 'kr'
+    elif region == "europe":
+        region = 'eun1'
+    elif region == "sea":
+        region = 'oc1'
+
+    summoner = whatcher.summoner.by_name(region, summoner_name)
+    return summoner['name']
+
+def get_summonerId(region):
+    if region == "americas":
+        region = 'na1'
+    elif region == "asia":
+        region = 'kr'
+    elif region == "europe":
+        region = 'eun1'
+    elif region == "sea":
+        region = 'oc1'
+
+    summoner = whatcher.summoner.by_name(region, summoner_name)
+    return summoner['id']
+
 
 with open('endpoints.json', 'r') as f:
     endpoints = json.load(f)
@@ -47,16 +94,17 @@ for game in data: # lol, tft, lor, val
         for key in data[game][region]:
             # key = puuid | matchId | accountId | summonerName | summonerId
 
+            print(f"Getting {key} for {game} in {region}")
             if key == "puuid":
                 value = get_puuid(region)
             elif key == "matchId":
-                value = get_matchId()
+                value = get_matchId(region)
             elif key == "accountId":
-                value = get_accountId()
+                value = get_accountId(region)
             elif key == "summonerName":
-                value = get_summonerName()
+                value = get_summonerName(region)
             elif key == "summonerId":
-                value = get_summonerId()
+                value = get_summonerId(region)
 
             data[game][region][key] = value
 
