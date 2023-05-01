@@ -1,7 +1,6 @@
 import json
 from riotwatcher import LolWatcher, ApiError
 import os
-import shutil
 
 """
 Autpomatically configures the endpoints.json with the correct API KEY
