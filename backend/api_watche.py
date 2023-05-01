@@ -2,7 +2,6 @@ import json
 import os
 import asyncio
 import aiohttp
-import time
 
 try:
     API_KEY = os.environ['RIOT_API_KEY']
@@ -69,14 +68,15 @@ async def get_all_urls():
 async def main():
     urls = await get_all_urls()
     async with aiohttp.ClientSession() as session:
-        for url in urls:
-            print(url)
-            try:
-                data = await make_request(url, API_KEY, session)
+        coroutines = [make_request(url, API_KEY, session) for url in urls]
+        responses = await asyncio.gather(*coroutines, return_exceptions=True)
+        for response in responses:
+            if isinstance(response, Exception):
+                print(response)
+            else:
                 print("200 OK")
-            except Exception as e:
-                print(e)
             print('\n')
+
 
 
 if __name__ == '__main__':
