@@ -2,11 +2,13 @@ import json
 import os
 import asyncio
 import aiohttp
+from dotenv import load_dotenv
 
-try:
-    API_KEY = os.environ['RIOT_API_KEY']
-except KeyError:
-    print("Please set the environment variable API_KEY")
+load_dotenv() # load variables from .env file
+
+API_KEY = os.environ.get('RIOT_API_KEY')
+if API_KEY is None:
+    print("Please set the environment variable RIOT_API_KEY in the .env file")
     exit(1)
 
 with open('endpoints.json', 'r') as f:
@@ -31,8 +33,6 @@ async def build_url(base_url: str, game: str, endpoint: str, region: str) -> str
     url = base_url.format(region=region) + endpoint
 
     return url
-
-
 
 async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -> dict:
     # Add the API key to the URL.
@@ -67,13 +67,21 @@ async def get_all_urls():
                     urls.append(url)
     return urls
 
+
+async def fetch_all(urls, api_key, session):
+    tasks = []
+    for url in urls:
+        task = asyncio.ensure_future(make_request(url=url, api_key=api_key, session=session))
+        tasks.append(task)
+    responses = await asyncio.gather(*tasks)
+    return responses
+
+
 async def main():
     urls = await get_all_urls()
-    responses = []
     async with aiohttp.ClientSession() as session:
-        for url in urls:
-            response = await make_request(url=url, api_key=API_KEY, session=session)
-            responses.append(response)
+        responses = await fetch_all(urls, api_key=API_KEY, session=session)
+        for response, url in zip(responses, urls):
             print(f'{response["status"]} - {url}')
 
     # Save to json file

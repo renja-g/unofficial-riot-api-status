@@ -1,3 +1,4 @@
 .env
 .venv
 endpoints.json
+responses.json
