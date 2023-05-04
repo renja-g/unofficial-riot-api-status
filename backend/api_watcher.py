@@ -47,7 +47,11 @@ async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -
                 await asyncio.sleep(retry_after)
             
             else:
-                return await response, response.status
+                # Extract the response data.
+                data = await response.json()
+
+                # Return the response data and status code as a dictionary.
+                return {'data': data, 'status': response.status}
 
 
 async def get_all_urls():
@@ -68,12 +72,14 @@ async def main():
     responses = []
     async with aiohttp.ClientSession() as session:
         for url in urls:
-            response, status = await make_request(url=url, api_key=API_KEY, session=session)
-            responses.append((response, status))
+            response = await make_request(url=url, api_key=API_KEY, session=session)
+            responses.append(response)
+            print(f'{response["status"]} - {url}')
 
     # Save to json file
     with open('responses.json', 'w') as f:
         json.dump(responses, f, indent=4)
+
 
 if __name__ == '__main__':
     asyncio.run(main())
