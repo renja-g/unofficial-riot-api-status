@@ -45,12 +45,10 @@ async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -
                 retry_after = int(response.headers.get('Retry-After', '1'))
                 print(f'Rate limited. Waiting for {retry_after} seconds.')
                 await asyncio.sleep(retry_after)
-            elif response.status == 200:
-                # If the response status is 200 (OK), return the JSON.
-                return await response.json()
+            
             else:
-                # If the response status is anything else, raise an exception.
-                raise Exception(f'Request failed with status {response.status}.')
+                return await response, response.status
+
 
 async def get_all_urls():
     urls = []
@@ -67,17 +65,15 @@ async def get_all_urls():
 
 async def main():
     urls = await get_all_urls()
+    responses = []
     async with aiohttp.ClientSession() as session:
-        coroutines = [make_request(url, API_KEY, session) for url in urls]
-        responses = await asyncio.gather(*coroutines, return_exceptions=True)
-        for response in responses:
-            if isinstance(response, Exception):
-                print(response)
-            else:
-                print("200 OK")
-            print('\n')
+        for url in urls:
+            response, status = await make_request(url=url, api_key=API_KEY, session=session)
+            responses.append((response, status))
 
-
+    # Save to json file
+    with open('responses.json', 'w') as f:
+        json.dump(responses, f, indent=4)
 
 if __name__ == '__main__':
     asyncio.run(main())
