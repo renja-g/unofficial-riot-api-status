@@ -5,6 +5,8 @@ import aiohttp
 from dotenv import load_dotenv
 from rich.console import Console
 from rich.table import Table
+from rich.panel import Panel
+
 
 
 
@@ -12,7 +14,7 @@ load_dotenv() # load variables from .env file
 
 API_KEY = os.environ.get('RIOT_API_KEY')
 if API_KEY is None:
-    print("Please set the environment variable RIOT_API_KEY in the .env file")
+    print('Please set the environment variable RIOT_API_KEY in the .env file')
     exit(1)
 
 with open('endpoints.json', 'r') as f:
@@ -43,7 +45,7 @@ async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -
     url += f'?api_key={api_key}'
 
     while True:
-        async with session.get(url) as response:
+        async with session.get(url,ssl=False) as response:
             if response.status == 429:
                 # If the response status is 429 (Too Many Requests), wait for the specified time before retrying.
                 retry_after = int(response.headers.get('Retry-After', '1'))
@@ -76,34 +78,43 @@ async def get_grouped_urls():
                     urls[endpoint_name][region].append(url)
     return urls
 
-async def get_responses(urls: list, api_key: str, session: aiohttp.ClientSession) -> list:
+async def get_responses(urls: list, api_key: str, session: aiohttp.ClientSession, sem: asyncio.Semaphore) -> list:
     tasks = []
     for url in urls:
-        tasks.append(make_request(url, api_key, session))
+        await sem.acquire()
+        tasks.append(asyncio.create_task(make_request(url, api_key, session)))
     responses = await asyncio.gather(*tasks)
+    for _ in urls:
+        sem.release()
     return responses
 
 async def main():
     console = Console()
     urls = await get_grouped_urls()
+    sem = asyncio.Semaphore(10) # Limit to 10 concurrent requests
 
     async with aiohttp.ClientSession() as session:
         # Make requests to all URLs and print the status codes.
         for endpoint in urls:
-            print(endpoint)
+            table = Table(title=endpoint)
+            table.add_column('Region')
+            table.add_column('Endpoints', justify='center')
+            '''
+            EUW1    (3/3)
+            NA1     (3/3)
+            '''
             for region in urls[endpoint]:
-                urls_to_request = urls[endpoint][region]
-                responses = await get_responses(urls_to_request, API_KEY, session)
-                table = Table(title=f"{endpoint} ({region})")
-                table.add_column("URL")
-                table.add_column("Status", justify="right")
-                for response, url in zip(responses, urls_to_request):
-                    status = str(response['status'])
-                    status_color = "green" if status == "200" else "red"
-                    table.add_row(url, f"[{status_color}]{status}[/{status_color}]")
-                console.print(table)
-            print()
-
+                responses = await get_responses(urls[endpoint][region], API_KEY, session, sem)
+                fraction = f'{len(responses)}/{len(urls[endpoint][region])}'
+                if len(responses) == len(urls[endpoint][region]):
+                    color = 'green'
+                elif len(responses) > 0:
+                    color = 'yellow'
+                else:
+                    color = 'red'
+                table.add_row(Panel(region), Panel(fraction, style=color))
+            console.print(table)
+            console.print('\n')
 
 if __name__ == '__main__':
     asyncio.run(main())
