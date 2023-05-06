@@ -17,7 +17,7 @@ with open('endpoints.json', 'r') as f:
     endpoints_data = json.load(f)
 
 
-async def build_url(base_url: str, game: str, endpoint: str, region: str) -> str:
+def build_url(base_url: str, game: str, endpoint: str, region: str) -> str:
     # Get the parameters for the specified game and region.
     parameters = endpoints_data['data'][game][region]
 
@@ -37,8 +37,10 @@ async def build_url(base_url: str, game: str, endpoint: str, region: str) -> str
     return url
 
 
+
 async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -> dict:
     headers = {'User-Agent': USER_AGENT}
+    original_url = url  
     url += f'?api_key={api_key}'
     while True:
         async with session.get(url, ssl=False, headers=headers) as response:
@@ -50,10 +52,10 @@ async def make_request(url: str, api_key: str, session: aiohttp.ClientSession) -
 
             else:
                 data = await response.json()
-                return {'data': data, 'status': response.status}
+                return {'data': data, 'status': response.status, 'url': original_url}
 
 
-async def get_all_urls() -> dict:
+def get_all_urls() -> dict:
     urls_by_region = {}
     for game, game_endpoints in endpoints_data['endpoints'].items():
         for endpoint in game_endpoints:
@@ -63,7 +65,7 @@ async def get_all_urls() -> dict:
                     urls_by_region[region] = []
                 for child in endpoint['children']:
                     child_url = child['child_url']
-                    url = await build_url(base_url=endpoints_data['baseUrl'], game=game, endpoint=child_url, region=region)
+                    url = build_url(base_url=endpoints_data['baseUrl'], game=game, endpoint=child_url, region=region)
                     urls_by_region[region].append(url)
     return urls_by_region
 
@@ -84,14 +86,24 @@ async def get_responses(urls_by_region: dict, api_key: str, session: aiohttp.Cli
 
 
 async def main():
-    urls_by_region = await get_all_urls()
+    urls_by_region = get_all_urls()
 
-    start_time = time.time()
     async with aiohttp.ClientSession() as session:
+        time_start = time.time()
         responses = await get_responses(urls_by_region, API_KEY, session)
-    end_time = time.time()
+        time_end = time.time()
 
-    print(f'Total time: {end_time - start_time} seconds')
+    # If all responses are successful, Print a success message.
+    if all([all([response['status'] == 200 for response in region_responses]) for region_responses in responses]):
+        print('\033[32mAll requests were successful.\033[0m')
+        print(f'The requests took {round(time_end - time_start, 2)} seconds to complete.')
+
+    # Otherwise, print the status code and URL for each failed request.
+    else:
+        for region_responses in responses:
+            for response in region_responses:
+                if response['status'] != 200:
+                    print(f'\033[31m{response["status"]}\033[0m - {response["url"]}')
 
 if __name__ == '__main__':
     asyncio.run(main())
