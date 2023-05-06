@@ -28,112 +28,160 @@
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "eun1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "euw1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "jp1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "kr": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "la1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "la2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "na1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "oc1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "ph2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "ru": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "sg2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "th2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "tr1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "tw2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             },
             "vn2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
                 "summonerId": "",
-                "championId": ""
+                "championId": "",
+                "queue": "",
+                "tier": "",
+                "division": ""
             }
         },
         "tft": {},
@@ -197,6 +245,32 @@
                 "children": [
                     {
                         "child_url": "/lol/platform/v3/champion-rotations"
+                    }
+                ]
+            },
+            {
+                "name": "LEAGUE-EXP-V4",
+                "regions": [
+                    "br1",
+                    "eun1",
+                    "euw1",
+                    "jp1",
+                    "kr",
+                    "la1",
+                    "la2",
+                    "na1",
+                    "oc1",
+                    "ph2",
+                    "ru",
+                    "sg2",
+                    "th2",
+                    "tr1",
+                    "tw2",
+                    "vn2"
+                ],
+                "children": [
+                    {
+                        "child_url": "/lol/league-exp/v4/entries/{queue}/{tier}/{division}"
                     }
                 ]
             },

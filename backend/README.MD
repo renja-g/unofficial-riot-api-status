@@ -25,6 +25,15 @@
 
 
 <details>
+  <summary>LEAGUE-EXP-V4</summary>
+
+  ```
+    ✔️ /lol/league-exp/v4/entries/{queue}/{tier}/{division}
+  ```
+</details>
+
+
+<details>
   <summary>MATCH-V5</summary>
 
   ```

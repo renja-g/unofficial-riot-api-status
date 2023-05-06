@@ -115,6 +115,12 @@ for game in data: # lol, tft, lor, val
                 value = get_summonerId(region)
             elif key == "championId":
                 value = get_championId()
+            elif key == "queue":
+                value = "RANKED_SOLO_5x5"
+            elif key == "tier":
+                value = "PLATINUM"
+            elif key == "division":
+                value = "IV"
 
             data[game][region][key] = value
 
