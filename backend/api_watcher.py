@@ -103,7 +103,7 @@ async def main():
         for region_responses in responses:
             for response in region_responses:
                 if response['status'] != 200:
-                    print(f'\033[31m{response["status"]}\033[0m - {response["url"]}')
+                    print(f'\033[31m{response["status"]} {response["data"]["status"]["message"]}\033[0m - {response["url"]}')
 
 if __name__ == '__main__':
     asyncio.run(main())

@@ -2,17 +2,19 @@ import json
 from riotwatcher import LolWatcher, ApiError
 import os
 import requests
+from dotenv import load_dotenv
 
 """
 Autpomatically configures the endpoints.json with the correct API KEY
 """
 
-try:
-    API_KEY = os.environ['RIOT_API_KEY']
-    whatcher = LolWatcher(API_KEY)
-except KeyError:
-    print("Please set the environment variable API_KEY")
+load_dotenv()
+
+API_KEY = os.environ.get('RIOT_API_KEY')
+if API_KEY is None:
+    print('Please set the environment variable RIOT_API_KEY in the .env file')
     exit(1)
+whatcher = LolWatcher(API_KEY)
 
 summoner_name = "Aatrox"
 
