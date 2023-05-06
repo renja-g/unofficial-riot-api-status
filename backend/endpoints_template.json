@@ -27,97 +27,113 @@
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "eun1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "euw1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "jp1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "kr": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "la1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "la2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "na1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "oc1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "ph2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "ru": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "sg2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "th2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "tr1": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "tw2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             },
             "vn2": {
                 "accountId": "",
                 "summonerName": "",
                 "puuid": "",
-                "summonerId": ""
+                "summonerId": "",
+                "championId": ""
             }
         },
         "tft": {},
@@ -127,7 +143,38 @@
     "endpoints": {
         "lol": [
             {
-                "game": "lol",
+                "name": "CHAMPION-MASTERY-V4",
+                "regions": [
+                    "br1",
+                    "eun1",
+                    "euw1",
+                    "jp1",
+                    "kr",
+                    "la1",
+                    "la2",
+                    "na1",
+                    "oc1",
+                    "ph2",
+                    "ru",
+                    "sg2",
+                    "th2",
+                    "tr1",
+                    "tw2",
+                    "vn2"
+                ],
+                "children": [
+                    {
+                        "child_url": "/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}"
+                    },
+                    {
+                        "child_url": "/lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/top"
+                    },
+                    {
+                        "child_url": "/lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}"
+                    }
+                ]
+            },
+            {
                 "name": "MATCH-V5",
                 "regions": ["americas", "asia", "europe", "sea"],
                 "children": [
@@ -143,7 +190,6 @@
                 ]
             },
             {
-                "game": "lol",
                 "name": "SUMMONER-V4",
                 "regions": [
                     "br1",

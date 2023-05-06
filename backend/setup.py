@@ -1,6 +1,7 @@
 import json
 from riotwatcher import LolWatcher, ApiError
 import os
+import requests
 
 """
 Autpomatically configures the endpoints.json with the correct API KEY
@@ -84,6 +85,11 @@ def get_summonerId(region):
     summoner = whatcher.summoner.by_name(region, summoner_name)
     return summoner['id']
 
+def get_championId():
+    url = "http://ddragon.leagueoflegends.com/cdn/13.9.1/data/en_US/champion.json"
+    response = requests.get(url)
+    data = response.json()
+    return data['data']['Aatrox']['key']
 
 with open('endpoints_template.json', 'r') as f:
     endpoints = json.load(f)
@@ -105,6 +111,8 @@ for game in data: # lol, tft, lor, val
                 value = get_summonerName(region)
             elif key == "summonerId":
                 value = get_summonerId(region)
+            elif key == "championId":
+                value = get_championId()
 
             data[game][region][key] = value
 
