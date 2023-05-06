@@ -34,6 +34,20 @@
 
 
 <details>
+  <summary>LEAGUE-V4</summary>
+
+  ```
+    ✔️ /lol/league/v4/challengerleagues/by-queue/{queue}
+    ✔️ /lol/league/v4/entries/by-summoner/{encryptedSummonerId}
+    ✔️ /lol/league/v4/entries/{queue}/{tier}/{division}
+    ✔️ /lol/league/v4/grandmasterleagues/by-queue/{queue}
+    ✔️ /lol/league/v4/leagues/{leagueId}
+    ✔️ /lol/league/v4/masterleagues/by-queue/{queue}
+  ```
+</details>
+
+
+<details>
   <summary>LOL-STATUS-V4</summary>
 
   ```

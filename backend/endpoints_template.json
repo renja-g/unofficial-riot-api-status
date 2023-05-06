@@ -31,7 +31,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "eun1": {
                 "accountId": "",
@@ -41,7 +42,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "euw1": {
                 "accountId": "",
@@ -51,7 +53,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "jp1": {
                 "accountId": "",
@@ -61,7 +64,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "kr": {
                 "accountId": "",
@@ -71,7 +75,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "la1": {
                 "accountId": "",
@@ -81,7 +86,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "la2": {
                 "accountId": "",
@@ -91,7 +97,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "na1": {
                 "accountId": "",
@@ -101,7 +108,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "oc1": {
                 "accountId": "",
@@ -111,7 +119,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "pbe1": {
             },
@@ -123,7 +132,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "ru": {
                 "accountId": "",
@@ -133,7 +143,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "sg2": {
                 "accountId": "",
@@ -143,7 +154,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "th2": {
                 "accountId": "",
@@ -153,7 +165,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "tr1": {
                 "accountId": "",
@@ -163,7 +176,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "tw2": {
                 "accountId": "",
@@ -173,7 +187,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             },
             "vn2": {
                 "accountId": "",
@@ -183,7 +198,8 @@
                 "championId": "",
                 "queue": "",
                 "tier": "",
-                "division": ""
+                "division": "",
+                "leagueId": ""
             }
         },
         "tft": {},
@@ -273,6 +289,47 @@
                 "children": [
                     {
                         "child_url": "/lol/league-exp/v4/entries/{queue}/{tier}/{division}"
+                    }
+                ]
+            },
+            {
+                "name": "LEAGUE-V4",
+                "regions": [
+                    "br1",
+                    "eun1",
+                    "euw1",
+                    "jp1",
+                    "kr",
+                    "la1",
+                    "la2",
+                    "na1",
+                    "oc1",
+                    "ph2",
+                    "ru",
+                    "sg2",
+                    "th2",
+                    "tr1",
+                    "tw2",
+                    "vn2"
+                ],
+                "children": [
+                    {
+                        "child_url": "/lol/league/v4/challengerleagues/by-queue/{queue}"
+                    },
+                    {
+                        "child_url": "/lol/league/v4/entries/by-summoner/{encryptedSummonerId}"
+                    },
+                    {
+                        "child_url": "/lol/league/v4/entries/{queue}/{tier}/{division}"
+                    },
+                    {
+                        "child_url": "/lol/league/v4/grandmasterleagues/by-queue/{queue}"
+                    },
+                    {
+                        "child_url": "/lol/league/v4/leagues/{leagueId}"
+                    },
+                    {
+                        "child_url": "/lol/league/v4/masterleagues/by-queue/{queue}"
                     }
                 ]
             },

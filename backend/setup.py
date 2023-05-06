@@ -93,6 +93,20 @@ def get_championId():
     data = response.json()
     return data['data']['Aatrox']['key']
 
+def get_leagueId(region):
+    if region == "americas":
+        region = 'na1'
+    elif region == "asia":
+        region = 'kr'
+    elif region == "europe":
+        region = 'eun1'
+    elif region == "sea":
+        region = 'oc1'
+
+    league = requests.get(f"https://{region}.api.riotgames.com/lol/league/v4/challengerleagues/by-queue/RANKED_SOLO_5x5?api_key={API_KEY}")
+    data = league.json()
+    return data['leagueId']
+
 with open('endpoints_template.json', 'r') as f:
     endpoints = json.load(f)
 data = endpoints['data']
@@ -121,6 +135,8 @@ for game in data: # lol, tft, lor, val
                 value = "PLATINUM"
             elif key == "division":
                 value = "IV"
+            elif key == "leagueId":
+                value = get_leagueId(region)
 
             data[game][region][key] = value
 
