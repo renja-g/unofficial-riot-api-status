@@ -137,6 +137,10 @@ for game in data: # lol, tft, lor, val
                 value = "IV"
             elif key == "leagueId":
                 value = get_leagueId(region)
+            elif key == "challengeId":
+                value = "0"
+            elif key == "level":
+                value = "MASTER"
 
             data[game][region][key] = value
 

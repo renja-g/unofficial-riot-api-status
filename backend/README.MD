@@ -9,9 +9,9 @@
     ❌ /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/by-champion/{championId}
     ✔️ /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}/top
     ✔️ /lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}
-  ```
 
-  ⚠️ If the summoner has no mastery on a champion, the endpoint will return a 404 error.
+    ⚠️ If the summoner has no mastery on a champion, the endpoint will return a 404 error.
+  ```
 </details>
 
 
@@ -43,6 +43,22 @@
     ✔️ /lol/league/v4/grandmasterleagues/by-queue/{queue}
     ✔️ /lol/league/v4/leagues/{leagueId}
     ✔️ /lol/league/v4/masterleagues/by-queue/{queue}
+  ```
+</details>
+
+
+<details>
+  <summary>LOL-CHALLENGES-V1</summary>
+
+  ```
+    ✔️ /lol/challenges/v1/challenges/config
+    ✔️ /lol/challenges/v1/challenges/percentiles
+    ✔️ /lol/challenges/v1/challenges/{challengeId}/config
+    ✔️ /lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}
+    ✔️ /lol/challenges/v1/challenges/{challengeId}/percentiles
+    ✔️ /lol/challenges/v1/player-data/{puuid}
+
+    ⚠️ pbe1 is not supported
   ```
 </details>
 

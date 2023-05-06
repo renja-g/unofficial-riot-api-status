@@ -32,7 +32,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "eun1": {
                 "accountId": "",
@@ -43,7 +45,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "euw1": {
                 "accountId": "",
@@ -54,7 +58,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "jp1": {
                 "accountId": "",
@@ -65,7 +71,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "kr": {
                 "accountId": "",
@@ -76,7 +84,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "la1": {
                 "accountId": "",
@@ -87,7 +97,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "la2": {
                 "accountId": "",
@@ -98,7 +110,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "na1": {
                 "accountId": "",
@@ -109,7 +123,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "oc1": {
                 "accountId": "",
@@ -120,10 +136,11 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
-            "pbe1": {
-            },
+            "pbe1": {},
             "ph2": {
                 "accountId": "",
                 "summonerName": "",
@@ -133,7 +150,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "ru": {
                 "accountId": "",
@@ -144,7 +163,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "sg2": {
                 "accountId": "",
@@ -155,7 +176,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "th2": {
                 "accountId": "",
@@ -166,7 +189,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "tr1": {
                 "accountId": "",
@@ -177,7 +202,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "tw2": {
                 "accountId": "",
@@ -188,7 +215,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             },
             "vn2": {
                 "accountId": "",
@@ -199,7 +228,9 @@
                 "queue": "",
                 "tier": "",
                 "division": "",
-                "leagueId": ""
+                "leagueId": "",
+                "challengeId": "",
+                "level": ""
             }
         },
         "tft": {},
@@ -330,6 +361,47 @@
                     },
                     {
                         "child_url": "/lol/league/v4/masterleagues/by-queue/{queue}"
+                    }
+                ]
+            },
+            {
+                "name": "LOL-CHALLENGES-V1",
+                "regions": [
+                    "br1",
+                    "eun1",
+                    "euw1",
+                    "jp1",
+                    "kr",
+                    "la1",
+                    "la2",
+                    "na1",
+                    "oc1",
+                    "ph2",
+                    "ru",
+                    "sg2",
+                    "th2",
+                    "tr1",
+                    "tw2",
+                    "vn2"
+                ],
+                "children": [
+                    {
+                        "child_url": "/lol/challenges/v1/challenges/config"
+                    },
+                    {
+                        "child_url": "/lol/challenges/v1/challenges/percentiles"
+                    },
+                    {
+                        "child_url": "/lol/challenges/v1/challenges/{challengeId}/config"
+                    },
+                    {
+                        "child_url": "/lol/challenges/v1/challenges/{challengeId}/leaderboards/by-level/{level}"
+                    },
+                    {
+                        "child_url": "/lol/challenges/v1/challenges/{challengeId}/percentiles"
+                    },
+                    {
+                        "child_url": "/lol/challenges/v1/player-data/{puuid}"
                     }
                 ]
             },
