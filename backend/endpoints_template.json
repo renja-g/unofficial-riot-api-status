@@ -113,6 +113,8 @@
                 "tier": "",
                 "division": ""
             },
+            "pbe1": {
+            },
             "ph2": {
                 "accountId": "",
                 "summonerName": "",
@@ -271,6 +273,32 @@
                 "children": [
                     {
                         "child_url": "/lol/league-exp/v4/entries/{queue}/{tier}/{division}"
+                    }
+                ]
+            },
+            {
+                "name": "LOL-STATUS-V4",
+                "regions": [
+                    "br1",
+                    "eun1",
+                    "euw1",
+                    "jp1",
+                    "kr",
+                    "la1",
+                    "la2",
+                    "na1",
+                    "oc1",
+                    "pbe1",
+                    "ph2",
+                    "ru",
+                    "sg2",
+                    "th2",
+                    "tr1",
+                    "vn2"
+                ],
+                "children": [
+                    {
+                        "child_url": "/lol/status/v4/platform-data"
                     }
                 ]
             },

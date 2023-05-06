@@ -96,7 +96,6 @@ async def main():
     # If all responses are successful, Print a success message.
     if all([all([response['status'] == 200 for response in region_responses]) for region_responses in responses]):
         print('\033[32mAll requests were successful.\033[0m')
-        print(f'The requests took {round(time_end - time_start, 2)} seconds to complete.')
 
     # Otherwise, print the status code and URL for each failed request.
     else:
@@ -105,5 +104,7 @@ async def main():
                 if response['status'] != 200:
                     print(f'\033[31m{response["status"]} {response["data"]["status"]["message"]}\033[0m - {response["url"]}')
 
+    total_requests = sum([len(region_responses) for region_responses in responses])
+    print(f'The {total_requests} requests took {round(time_end - time_start, 2)} seconds to complete.')
 if __name__ == '__main__':
     asyncio.run(main())

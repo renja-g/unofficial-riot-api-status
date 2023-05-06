@@ -34,6 +34,15 @@
 
 
 <details>
+  <summary>LOL-STATUS-V4</summary>
+
+  ```
+    ✔️ /lol/status/v4/platform-data
+  ```
+</details>
+
+
+<details>
   <summary>MATCH-V5</summary>
 
   ```
