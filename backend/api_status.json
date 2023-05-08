@@ -1,0 +1,111 @@
+{
+    "lol": {
+      "MATCH-V5": {
+        "/lol/match/v5/matches/by-puuid/{puuid}/ids": {
+          "AMERICAS": {"status": 200, "timestamp": 1683528558},
+          "ASIA": {"status": 200, "timestamp": 1683528558},
+          "EUROPE": {"status": 200, "timestamp": 1683528558},
+          "SEA": {"status": 200, "timestamp": 1683528558}
+        },
+        "/lol/match/v5/matches/{matchId}": {
+          "AMERICAS": {"status": 200, "timestamp": 1683528558},
+          "ASIA": {"status": 200, "timestamp": 1683528558},
+          "EUROPE": {"status": 200, "timestamp": 1683528558},
+          "SEA": {"status": 200, "timestamp": 1683528558}
+        },
+        "/lol/match/v5/matches/{matchId}/timeline": {
+          "AMERICAS": {"status": 200, "timestamp": 1683528558},
+          "ASIA": {"status": 200, "timestamp": 1683528558},
+          "EUROPE": {"status": 200, "timestamp": 1683528558},
+          "SEA": {"status": 200, "timestamp": 1683528558}
+        }
+      },
+      "LEAGUE-V4": {
+        "/lol/league/v4/challengerleagues/by-queue/{queue}": {
+          "BR1": {"status": 200, "timestamp": 1683528558},
+          "EUN1": {"status": 200, "timestamp": 1683528558},
+          "EUW1": {"status": 200, "timestamp": 1683528558},
+          "JP1": {"status": 200, "timestamp": 1683528558},
+          "KR": {"status": 200, "timestamp": 1683528558},
+          "LA1": {"status": 200, "timestamp": 1683528558},
+          "LA2": {"status": 200, "timestamp": 1683528558},
+          "NA1": {"status": 200, "timestamp": 1683528558},
+          "OC1": {"status": 200, "timestamp": 1683528558},
+          "TR1": {"status": 200, "timestamp": 1683528558},
+          "RU": {"status": 200, "timestamp": 1683528558},
+          "PH2": {"status": 200, "timestamp": 1683528558},
+          "SG2": {"status": 200, "timestamp": 1683528558},
+          "TH2": {"status": 200, "timestamp": 1683528558},
+          "TW2": {"status": 200, "timestamp": 1683528558},
+          "VN2": {"status": 200, "timestamp": 1683528558}
+        },
+        "/lol/league/v4/entries/by-summoner/{encryptedSummonerId}": {
+          "BR1": {"status": 200, "timestamp": 1683528558},
+          "EUN1": {"status": 200, "timestamp": 1683528558},
+          "EUW1": {"status": 200, "timestamp": 1683528558},
+          "JP1": {"status": 200, "timestamp": 1683528558},
+          "KR": {"status": 200, "timestamp": 1683528558},
+          "LA1": {"status": 200, "timestamp": 1683528558},
+          "LA2": {"status": 200, "timestamp": 1683528558},
+          "NA1": {"status": 200, "timestamp": 1683528558},
+          "OC1": {"status": 200, "timestamp": 1683528558},
+          "TR1": {"status": 200, "timestamp": 1683528558},
+          "RU": {"status": 200, "timestamp": 1683528558},
+          "PH2": {"status": 200, "timestamp": 1683528558},
+          "SG2": {"status": 200, "timestamp": 1683528558},
+          "TH2": {"status": 200, "timestamp": 1683528558},
+          "TW2": {"status": 200, "timestamp": 1683528558},
+          "VN2": {"status": 200, "timestamp": 1683528558}
+        },
+        "/lol/league/v4/entries/{queue}/{tier}/{division}": {
+          "BR1": {"status": 200, "timestamp": 1683528558},
+          "EUN1": {"status": 200, "timestamp": 1683528558},
+          "EUW1": {"status": 200, "timestamp": 1683528558},
+          "JP1": {"status": 200, "timestamp": 1683528558},
+          "KR": {"status": 200, "timestamp": 1683528558},
+          "LA1": {"status": 200, "timestamp": 1683528558},
+          "LA2": {"status": 200, "timestamp": 1683528558},
+          "NA1": {"status": 200, "timestamp": 1683528558},
+          "OC1": {"status": 200, "timestamp": 1683528558},
+          "TR1": {"status": 200, "timestamp": 1683528558},
+          "RU": {"status": 200, "timestamp": 1683528558},
+          "PH2": {"status": 200, "timestamp": 1683528558},
+          "SG2": {"status": 200, "timestamp": 1683528558},
+          "TH2": {"status": 200, "timestamp": 1683528558},
+          "TW2": {"status": 200, "timestamp": 1683528558},
+          "VN2": {"status": 200, "timestamp": 1683528558}
+        },
+        "/lol/league/v4/grandmasterleagues/by-queue/{queue}": {
+          "BR1": {"status": 200, "timestamp": 1683528558},
+          "EUN1": {"status": 200, "timestamp": 1683528558},
+          "EUW1": {"status": 200, "timestamp": 1683528558},
+          "JP1": {"status": 200, "timestamp": 1683528558},
+          "KR": {"status": 200, "timestamp": 1683528558},
+          "LA1": {"status": 200, "timestamp": 1683528558},
+          "LA2": {"status": 200, "timestamp": 1683528558},
+          "NA1": {"status": 200, "timestamp": 1683528558},
+          "OC1": {"status": 200, "timestamp": 1683528558},
+          "TR1": {"status": 200, "timestamp": 1683528558},
+          "RU": {"status": 200, "timestamp": 1683528558},
+          "PH2": {"status": 200, "timestamp": 1683528558},
+          "SG2": {"status": 200, "timestamp": 1683528558},
+          "TH2": {"status": 200, "timestamp": 1683528558},
+          "TW2": {"status": 200, "timestamp": 1683528558},
+          "VN2": {"status": 200, "timestamp": 1683528558}
+        }
+      },
+      "CLASH-V1": {
+        "/lol/clash/v1/players/by-puuid/{encryptedPUUID}": {
+          "none": "This endpoint is not implemented."
+        },
+        "/lol/clash/v1/players/by-summoner/{summonerId}": "None",
+        "/lol/clash/v1/teams/{teamId}": "null",
+        "/lol/clash/v1/tournaments": {},
+        "/lol/clash/v1/tournaments/by-team/{teamId}": {},
+        "/lol/clash/v1/tournaments/{tournamentId}": {}
+      }
+    },
+    "tft": {},
+    "lor": {},
+    "val": {} 
+  }
